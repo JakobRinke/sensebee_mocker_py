@@ -1,8 +1,8 @@
 import py_sensbee.sensor as sensor
 import time
 
-test_id = "c359f1e8-0493-4cd6-945b-db690760a22c"
-s = sensor.Sensor(test_id, read_api_key="6849fe40-95a8-447e-bf6f-9e08b35c3f6c")
+test_id = "64c3f9f9-06e5-451e-b472-e4dee929c59e"
+s = sensor.Sensor(test_id, read_api_key="3eba757e-39b5-455a-9be1-338706a80f41")
 
 
 # s.upload_data([{
