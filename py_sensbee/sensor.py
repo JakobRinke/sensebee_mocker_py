@@ -39,5 +39,3 @@ class Sensor:
         if resp.status_code != 200:
             raise Exception(f"Failed to get data: {resp.status_code} {resp.text}")
         return resp.json()
-
-        
