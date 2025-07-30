@@ -1,7 +1,6 @@
 import requests
 import config
 
-
 class Sensor:
     def __init__(self, id:str, write_api_key:str=None, read_api_key:str=None):
         self.id = id
