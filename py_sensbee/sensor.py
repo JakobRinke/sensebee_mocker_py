@@ -12,7 +12,7 @@ class Sensor:
         """
         Uploads data to the server.
         """
-        url = f"{config.SENSBEE_API_URL}/data/sensor/{self.id}/ingest?key={self.write_api_key}"
+        url = f"{config.SENSBEE_API_URL}/sensors/{self.id}/data/ingest?key={self.write_api_key}"
         resp = requests.post(
             url,
             json=data
@@ -24,7 +24,7 @@ class Sensor:
     
     def get_data(self, start_time=None, end_time=None, limit=None, ordering="ASC"):
 
-        url = f"{config.SENSBEE_API_URL}/data/sensor/{self.id}/load?key={self.read_api_key}"
+        url = f"{config.SENSBEE_API_URL}/sensors/{self.id}/data/load?key={self.read_api_key}"
         if start_time is not None:
             url += f"&start_time={start_time}"
         if end_time is not None:
