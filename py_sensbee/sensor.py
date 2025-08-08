@@ -1,7 +1,6 @@
 import requests
 import config
 
-
 class Sensor:
     def __init__(self, id:str, write_api_key:str=None, read_api_key:str=None):
         self.id = id
@@ -39,5 +38,3 @@ class Sensor:
         if resp.status_code != 200:
             raise Exception(f"Failed to get data: {resp.status_code} {resp.text}")
         return resp.json()
-
-        
